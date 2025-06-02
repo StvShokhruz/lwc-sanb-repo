@@ -1,0 +1,16 @@
+<template>
+    <lightning-layout class="slds-grid slds-grid_vertical">
+        <lightning-layout-item class="slds-col slds-m-around_x-small">
+            <lightning-button class="slds-float_right" label="Add" variant="brand" title="Add one or more Order Items" onclick={addProducts}></lightning-button>
+        </lightning-layout-item>
+        <lightning-layout-item class="slds-col">
+            <div data-id="productDataTable" style="height: 300px; margin-top: 1">
+                <lightning-datatable
+                    key-field="id"
+                    data={productData}
+                    columns={columnInfos}>
+                </lightning-datatable>
+            </div>
+        </lightning-layout-item>
+    </lightning-layout>
+</template>

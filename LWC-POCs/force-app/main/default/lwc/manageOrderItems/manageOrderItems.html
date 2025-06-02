@@ -1,0 +1,21 @@
+<template>
+    <lightning-layout class="slds-grid">
+        <lightning-layout-item class="slds-col slds-m-around_x-small">
+            <lightning-button class="slds-float_left" label="Save" variant="brand" title="Save one or more Order Items" onclick={saveItems}></lightning-button>
+        </lightning-layout-item>
+    <lightning-layout-item class="slds-col slds-m-around_x-small">
+            <lightning-button class="slds-float_right" label="Remove" variant="brand" title="Delete one or more Order Items" onclick={deleteItems}></lightning-button>
+        </lightning-layout-item>
+    </lightning-layout>
+    <lightning-layout>
+        <lightning-layout-item class="slds-col">
+            <div data-id="orderItemTable" style="height: 300px;">
+                <lightning-datatable
+                   key-field="id"
+                   data={orderItemsData}
+                    columns={columnInfos}>
+                </lightning-datatable>
+            </div>
+        </lightning-layout-item>
+    </lightning-layout>
+</template>
